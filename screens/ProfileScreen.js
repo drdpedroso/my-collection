@@ -1,11 +1,13 @@
 import React, {PureComponent} from 'react';
 import Header from "../components/Header";
-import {ScrollView, StyleSheet, View} from "react-native";
+import {ScrollView, StyleSheet, View, Image} from "react-native";
 import SneakerCard from "../components/SneakerCard";
 import sneaker from "../images/sneaker.jpg";
 import sneaker2 from "../images/sneaker2.jpg";
-import {Container, Thumbnail} from "native-base";
+import {Container, Thumbnail, Text} from "native-base";
 import profile1 from "../images/profile1.jpg";
+import {Icon} from 'expo'
+import {Col, Row, Grid} from 'react-native-easy-grid';
 
 class ProfileScreen extends PureComponent {
     static navigationOptions = {
@@ -19,9 +21,40 @@ class ProfileScreen extends PureComponent {
     render() {
         return (
             <ScrollView style={styles.container}>
-                <View style={{paddingTop: 10, marginTop: 10, marginBottom: 3}}>
-                    <Thumbnail source={profile1}/>
+                <View style={{
+                    paddingTop: 10,
+                    marginTop: 10,
+                    marginBottom: 3,
+                    alignSelf: 'center',
+                    justifyContent: 'center',
+                    textAlign: 'center'
+                }}>
+                    <Image source={profile1} style={{
+                        width: 150, height: 150, borderRadius: 75, alignSelf: 'center',
+                        justifyContent: 'center',
+                    }}/>
+                    <Text style={{
+                        alignSelf: 'center',
+                        justifyContent: 'center',
+                        textAlign: 'center',
+                        fontSize: 22,
+                        fontWeight: 'bold'
+                    }}>Kevin Heart</Text>
+                    <Text style={{
+                        alignSelf: 'center',
+                        justifyContent: 'center',
+                        textAlign: 'center',
+                    }}>305 Nike Sneakers</Text>
+                    {/*<Row>*/}
+                    <Text style={{
+                        alignSelf: 'center',
+                        justifyContent: 'center',
+                        textAlign: 'center',
+                    }}>
+                        <Icon.Ionicons style={{marginRight: 2, marginBottom: 3}} name="md-pin"/>
+                        Hilversum - Netherlands</Text>
                 </View>
+
                 <View style={{
                     display: 'flex',
                     flexWrap: 'wrap',
@@ -32,11 +65,6 @@ class ProfileScreen extends PureComponent {
                 }}>
                     <SneakerCard image={sneaker} onPress={() => this.goToDetails()}/>
                     <SneakerCard image={sneaker2} onPress={() => this.goToDetails()}/>
-                    {/*<SneakerCard image={sneaker}/>*/}
-                    {/*<SneakerCard image={sneaker}/>*/}
-                    {/*<SneakerCard image={sneaker}/>*/}
-                    {/*<SneakerCard image={sneaker}/>*/}
-                    {/*<SneakerCard image={sneaker}/>*/}
                 </View>
 
             </ScrollView>

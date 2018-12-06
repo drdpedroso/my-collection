@@ -1,14 +1,14 @@
 import React from 'react';
 import {Platform} from 'react-native';
-import {createStackNavigator, createBottomTabNavigator} from 'react-navigation';
+import {createBottomTabNavigator, createStackNavigator} from 'react-navigation';
 
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import DiscoveryScreen from "../screens/DiscoveryScreen";
 import DetailsScreen from "../screens/DetailsScreen";
 import AddScreen from "../screens/AddScreen";
+import ProfileScreen from "../screens/ProfileScreen";
 
 const HomeStack = createStackNavigator({
     Home: HomeScreen,
@@ -45,7 +45,8 @@ AddStack.navigationOptions = {
 
 const DiscoverStack = createStackNavigator({
     Discovery: DiscoveryScreen,
-    Details: DetailsScreen
+    Details: DetailsScreen,
+    Profile: ProfileScreen
 });
 
 DiscoverStack.navigationOptions = {

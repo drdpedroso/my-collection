@@ -10,7 +10,7 @@ export default class ListAvatar extends Component {
         return (
             <Content>
                 <List>
-                    <ListItem avatar>
+                    <ListItem avatar onPress={(a) => this.props.onPressUser(1)}>
                         <Left>
                             <Thumbnail source={profile1}/>
                         </Left>

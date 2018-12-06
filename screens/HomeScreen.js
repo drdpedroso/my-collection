@@ -14,6 +14,10 @@ export default class HomeScreen extends React.Component {
         headerTitle: <Header/>
     };
 
+    goToProfile(userId) {
+        this.props.navigation.navigate('Profile', {})
+    }
+
     render() {
         return (
             <ScrollView style={styles.container}>
@@ -28,7 +32,7 @@ export default class HomeScreen extends React.Component {
                     />
                     <Text style={styles.topTitle}> TOP 10 - Collectors </Text>
                     <View style={styles.separator}/>
-                    <ListAvatar/>
+                    <ListAvatar onPressUser={(id) => this.goToProfile(id)}/>
                 </Container>
             </ScrollView>
         );
