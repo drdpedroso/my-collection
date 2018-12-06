@@ -6,22 +6,23 @@ import SneakerCard from "../components/SneakerCard";
 import {Col, Row, Grid} from 'react-native-easy-grid';
 import sneaker from '../images/sneaker.jpg';
 import sneaker2 from '../images/sneaker2.jpg';
+import Navigation from 'react-navigation';
+
 
 class DiscoveryScreen extends PureComponent {
     static navigationOptions = {
         headerTitle: <Header/>
     };
 
+    goToDetails() {
+        this.props.navigation.navigate('Details')
+    }
+
     render() {
+        console.log(this.props)
         return (
             <ScrollView style={styles.container}>
-                {/*<Grid>*/}
-                {/*<Row>*/}
-                {/*<Col><SneakerCard/></Col>*/}
-                {/*<Col><SneakerCard/></Col>*/}
-                {/*<Col><SneakerCard/></Col>*/}
-                {/*</Row>*/}
-                {/*</Grid>*/}
+
                 <View style={{
                     display: 'flex',
                     flexWrap: 'wrap',
@@ -30,8 +31,8 @@ class DiscoveryScreen extends PureComponent {
                     alignItems: 'center',
                     paddingLeft: 8
                 }}>
-                    <SneakerCard image={sneaker}/>
-                    <SneakerCard image={sneaker2}/>
+                    <SneakerCard image={sneaker} onPress={() => this.goToDetails()}/>
+                    <SneakerCard image={sneaker2} onPress={() => this.goToDetails()}/>
                     {/*<SneakerCard image={sneaker}/>*/}
                     {/*<SneakerCard image={sneaker}/>*/}
                     {/*<SneakerCard image={sneaker}/>*/}

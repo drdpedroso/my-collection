@@ -7,6 +7,8 @@ import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 import DiscoveryScreen from "../screens/DiscoveryScreen";
+import DetailsScreen from "../screens/DetailsScreen";
+import AddScreen from "../screens/AddScreen";
 
 const HomeStack = createStackNavigator({
     Home: HomeScreen,
@@ -28,7 +30,7 @@ HomeStack.navigationOptions = {
 
 
 const AddStack = createStackNavigator({
-    Settings: SettingsScreen,
+    Add: AddScreen,
 });
 
 AddStack.navigationOptions = {
@@ -74,5 +76,5 @@ export default createBottomTabNavigator({
     HomeStack,
     AddStack,
     DiscoverStack,
-    ProfileStack,
+    ProfileStack
 });

@@ -4,15 +4,15 @@ import {StyleSheet} from "react-native";
 
 const ButtonWrapper = (props) => {
     return (
-        <Content>
-            <Button {...props} style={styles.button}/>
-        </Content>
+        <Button {...props} style={styles.button}/>
+
     );
 };
 
 const styles = StyleSheet.create({
     button: {
-        backgroundColor: '#000'
+        backgroundColor: '#000',
+        margin: 10
     }
 });
 
