@@ -15,7 +15,9 @@ export default class HomeScreen extends React.Component {
     };
 
     goToProfile(userId) {
-        this.props.navigation.navigate('Profile', {})
+        this.props.navigation.navigate('Profile', {
+            shouldHide: true
+        })
     }
 
     render() {

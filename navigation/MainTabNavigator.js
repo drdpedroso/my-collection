@@ -9,6 +9,7 @@ import DiscoveryScreen from "../screens/DiscoveryScreen";
 import DetailsScreen from "../screens/DetailsScreen";
 import AddScreen from "../screens/AddScreen";
 import ProfileScreen from "../screens/ProfileScreen";
+import BuyScreen from "../screens/BuyScreen";
 
 const HomeStack = createStackNavigator({
     Home: HomeScreen,
@@ -46,7 +47,8 @@ AddStack.navigationOptions = {
 const DiscoverStack = createStackNavigator({
     Discovery: DiscoveryScreen,
     Details: DetailsScreen,
-    Profile: ProfileScreen
+    Profile: ProfileScreen,
+    Buy: BuyScreen
 });
 
 DiscoverStack.navigationOptions = {
@@ -60,11 +62,11 @@ DiscoverStack.navigationOptions = {
 };
 
 const ProfileStack = createStackNavigator({
-    Settings: SettingsScreen,
+    Settings: ProfileScreen,
 });
 
 ProfileStack.navigationOptions = {
-    tabBarLabel: 'User',
+    tabBarLabel: 'Profile',
     tabBarIcon: ({focused}) => (
         <TabBarIcon
             focused={focused}

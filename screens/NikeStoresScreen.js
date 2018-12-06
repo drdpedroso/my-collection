@@ -1,6 +1,8 @@
 import React, {PureComponent} from 'react';
 import Header from "../components/Header";
 import {ScrollView, StyleSheet} from "react-native";
+import MapView from 'react-native-maps';
+
 
 class NikeStoresScreen extends PureComponent {
     static navigationOptions = {

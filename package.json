@@ -17,6 +17,8 @@
     "react": "16.5.0",
     "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
     "react-native-camera": "^1.5.0",
+    "react-native-maps": "^0.22.1",
+    "react-native-maps-directions": "^1.6.0",
     "react-native-star-rating": "^1.1.0",
     "react-native-super-grid": "^2.4.3",
     "react-navigation": "^2.18.2"
