@@ -45,6 +45,7 @@ AddStack.navigationOptions = {
 
 const DiscoverStack = createStackNavigator({
     Discovery: DiscoveryScreen,
+    Details: DetailsScreen
 });
 
 DiscoverStack.navigationOptions = {

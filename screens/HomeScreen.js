@@ -18,11 +18,7 @@ export default class HomeScreen extends React.Component {
         return (
             <ScrollView style={styles.container}>
                 <Container>
-                    {/*<Button>*/}
-                    {/*<Text>*/}
-                    {/*Button*/}
-                    {/*</Text>*/}
-                    {/*</Button>*/}
+
                     <Image
                         source={banner}
                         style={{
@@ -55,7 +51,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
         marginTop: 10,
         padding: 10,
-        
+
     },
     developmentModeText: {
         marginBottom: 20,

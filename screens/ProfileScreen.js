@@ -1,27 +1,27 @@
 import React, {PureComponent} from 'react';
 import Header from "../components/Header";
 import {ScrollView, StyleSheet, View} from "react-native";
-import {Container} from "native-base";
 import SneakerCard from "../components/SneakerCard";
-import {Col, Row, Grid} from 'react-native-easy-grid';
-import sneaker from '../images/sneaker.jpg';
-import sneaker2 from '../images/sneaker2.jpg';
-import Navigation from 'react-navigation';
+import sneaker from "../images/sneaker.jpg";
+import sneaker2 from "../images/sneaker2.jpg";
+import {Container, Thumbnail} from "native-base";
+import profile1 from "../images/profile1.jpg";
 
-
-class DiscoveryScreen extends PureComponent {
+class ProfileScreen extends PureComponent {
     static navigationOptions = {
         headerTitle: <Header/>
     };
 
     goToDetails() {
-        this.props.navigation.navigate('Details')
+        this.props.navigation.navigate('Details', {})
     }
 
     render() {
         return (
             <ScrollView style={styles.container}>
-
+                <View style={{paddingTop: 10, marginTop: 10, marginBottom: 3}}>
+                    <Thumbnail source={profile1}/>
+                </View>
                 <View style={{
                     display: 'flex',
                     flexWrap: 'wrap',
@@ -51,4 +51,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default DiscoveryScreen;
+export default ProfileScreen;
