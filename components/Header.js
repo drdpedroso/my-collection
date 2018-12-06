@@ -10,7 +10,7 @@ class Header extends Component {
                     source={logo}
                     style={{width: 80, height: 50}}
                 />
-                
+
             </React.Fragment>
         );
     }

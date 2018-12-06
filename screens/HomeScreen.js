@@ -1,8 +1,13 @@
 import React from 'react';
-import {Platform, StyleSheet, View,} from 'react-native';
-import {Button, Container, Text} from 'native-base';
+import {Platform, StyleSheet, Image, ScrollView, View} from 'react-native';
+import {Container, Text} from 'native-base';
+import Button from '../components/Button';
 import {WebBrowser} from 'expo';
 import Header from "../components/Header";
+import banner from '../images/mzCX4x.jpg';
+import ListAvatar from "../components/ListAvatar";
+
+console.ignoredYellowBox = ['Warning: Each', 'Warning: Failed'];
 
 export default class HomeScreen extends React.Component {
     static navigationOptions = {
@@ -11,15 +16,25 @@ export default class HomeScreen extends React.Component {
 
     render() {
         return (
-            <View style={styles.container}>
+            <ScrollView style={styles.container}>
                 <Container>
-                    <Button>
-                        <Text>
-                            Button
-                        </Text>
-                    </Button>
+                    {/*<Button>*/}
+                    {/*<Text>*/}
+                    {/*Button*/}
+                    {/*</Text>*/}
+                    {/*</Button>*/}
+                    <Image
+                        source={banner}
+                        style={{
+                            width: '100%',
+                            height: 250,
+                        }}
+                    />
+                    <Text style={styles.topTitle}> TOP 10 - Collectors </Text>
+                    <View style={styles.separator}/>
+                    <ListAvatar/>
                 </Container>
-            </View>
+            </ScrollView>
         );
     }
 
@@ -28,7 +43,19 @@ export default class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: '#fff',
+    },
+    separator: {
+        width: 110,
         backgroundColor: '#000',
+        height: 3
+    },
+    topTitle: {
+        fontSize: 22,
+        marginBottom: 10,
+        marginTop: 10,
+        padding: 10,
+        
     },
     developmentModeText: {
         marginBottom: 20,
